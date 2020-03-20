@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import arcmop.blog.springbootest.repository.OperacionRepository;
-import arcmop.blog.springbootest.service.OperacionService;
+import arcmop.blog.springbootest.configuracion.OperacionService;
+
+
 
 @RestController
 @RequestMapping

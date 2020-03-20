@@ -1,4 +1,4 @@
-package arcmop.blog.springbootest.service;
+package arcmop.blog.springbootest.configuracion;
 
 import java.util.List;
 
@@ -8,8 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import arcmop.blog.springbootest.entity.Operacion;
-import arcmop.blog.springbootest.repository.OperacionRepository;
+
 
 
 
