@@ -13,6 +13,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -22,13 +24,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = StartApplication.class)
-@DataJpaTest
+
 public class SpringbootRestApplicationUTTests {
 	
-	@Autowired
-    private OperacionRepository employeeRepository;
 	
-	@Autowired private OperacionRepository userRepository;
 
 		
 	    @Test
@@ -50,7 +49,7 @@ public class SpringbootRestApplicationUTTests {
 	       // System.out.println(operacionService.devolverCantidad());
 	        //System.out.println(Integer.parseInt(String.valueOf(instance.saludar(sum01, sum02).get("resultado"))));	
 	       //Assert.assertEquals(  Double.valueOf(resultado) ,  Double.valueOf(o.getResultado())   );
-	       assertThat(userRepository).isNotNull();
+	      
 	       System.out.print("Iguales");	
 	    }
 

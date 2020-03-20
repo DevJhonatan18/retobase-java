@@ -1,9 +1,9 @@
 version: '2'
 services:
   app:
-    image: app
+    build: .
     ports:
-    - "8080:8080"
+    - "3081:3081"
     depends_on:
     - mypostgres
   mypostgres:
