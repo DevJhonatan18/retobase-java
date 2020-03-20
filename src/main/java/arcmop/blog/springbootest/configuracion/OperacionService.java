@@ -26,6 +26,12 @@ public class OperacionService {
 	public void guardarResultados(double num1 , double num2 , double resultado){
 		operacionRepository.save(new Operacion(num1,num2,resultado));
 	}
+	
+	public Long devolverCantidad(){
+		return operacionRepository.count();
+	}
+	
+	
 		
 	
 	
