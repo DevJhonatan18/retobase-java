@@ -2,12 +2,22 @@ version: '2'
 services:
   app:
     build: .
+    network_mode: bridge
+    expose:
+    - 3081
     ports:
     - "3081:3081"
     depends_on:
     - mypostgres
+    links:
+    - mypostgres
   mypostgres:
-    image: postgres
+    image: postgres:latest
+    network_mode: bridge
+    volumes:
+       - postgres-data:/var/lib/postgresql/data
+    expose:
+    - 5432
     ports:
      - "5432:5432"
     environment:
@@ -15,3 +25,5 @@ services:
      - POSTGRES_USER=postgres
      - POSTGRES_DB=mydb
 
+volumes:
+  postgres-data:
