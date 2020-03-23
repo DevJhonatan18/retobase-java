@@ -9,6 +9,8 @@ services:
     - "3081:3081"
     depends_on:
     - mypostgres
+    environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://mypostgres:5432/mydb
     links:
     - mypostgres
   mypostgres:
