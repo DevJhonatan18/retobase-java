@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface OperacionRepository extends CrudRepository<Operacion, Integer> {
+public interface OperacionRepository extends JpaRepository<Operacion, Integer> {
    
 	
 }

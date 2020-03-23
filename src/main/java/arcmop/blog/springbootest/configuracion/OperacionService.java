@@ -27,10 +27,8 @@ public class OperacionService {
 		operacionRepository.save(new Operacion(num1,num2,resultado));
 	}
 	
-	public Long devolverCantidad(){
-		return operacionRepository.count();
-	}
 	
+	  	
 	
 		
 	
