@@ -2,7 +2,7 @@ version: '2'
 services:
 
   nginx:
-    image: jwilder/nginx-proxy
+    build: nginx
     networks:
       - local
     volumes:
@@ -23,7 +23,7 @@ services:
     links:
     - mypostgres
   mypostgres:
-    image: postgres:latest
+    build: postgres 
     networks:
       - local
     volumes:
