@@ -1,21 +1,31 @@
 version: '2'
 services:
+
+  nginx:
+    image: jwilder/nginx-proxy
+    networks:
+      - local
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+    ports:
+      - "80:80"
   app:
     build: .
-    network_mode: bridge
-    expose:
-    - 3081
+    networks:
+      - local
     ports:
-    - "3081:3081"
+    - "3081"
     depends_on:
     - mypostgres
     environment:
     - SPRING_DATASOURCE_URL=jdbc:postgresql://mypostgres:5432/mydb
+    - VIRTUAL_HOST=localhost
     links:
     - mypostgres
   mypostgres:
     image: postgres:latest
-    network_mode: bridge
+    networks:
+      - local
     volumes:
        - postgres-data:/var/lib/postgresql/data
     expose:
@@ -29,3 +39,7 @@ services:
 
 volumes:
   postgres-data:
+
+
+networks:
+  local:
