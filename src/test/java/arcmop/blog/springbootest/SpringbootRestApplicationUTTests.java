@@ -50,7 +50,7 @@ public class SpringbootRestApplicationUTTests {
 	        //System.out.println(Integer.parseInt(String.valueOf(instance.saludar(sum01, sum02).get("resultado"))));	
 	       //Assert.assertEquals(  Double.valueOf(resultado) ,  Double.valueOf(o.getResultado())   );
 	      
-	       System.out.print("Iguales");	
+	       System.out.println("Iguales");	
 	    }
 
 }
