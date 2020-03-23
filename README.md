@@ -6,6 +6,7 @@ Base para reto en Java
 - Postgress
 
 
+Se necesita tener instalado openjdk-8-jdk , o JDK 8
 Utilizar el bashero compile.sh para compilar el proyecto y generar los archivos necesarios 
    - Comando ./compile.sh
    
